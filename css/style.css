@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+}
+
+
+nav{
+    background-color: white;
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    max-width: 1280px;
+    justify-content: space-between;
+}
+.logoleft{
+    display: flex;
+    align-items: center;
+}
+.logoleft img{
+    width: 120px;
+    align-self: flex-start;
+}
+.logoleft ul{
+    display: flex;
+    font-size: 18px;
+    gap: 25px;
+    margin-left: 25px;
+}
+.logoleft ul a{
+    color: gray;
+    transition: .3s;
+}
+.logoleft ul a:hover{
+    color: orangered;
+}
+
+.logoright i{
+    color: orangered;
+    margin-right: 20px;
+}
+.logoright i>a{
+    color: orangered;
+    font-style:normal;
+}
+.logoright > a:last-child{
+    border: 2px solid red;
+    padding: 18px 40px;
+    border-radius: 50px;
+    background-color: rgb(235, 16, 0);
+    color: white;
+}
+.menu{
+    position:absolute;
+    width: 100%;
+    right: 0;
+    text-align: right;
+    font-size: 40px;
+    position:fixed;
+}
+.menu p{
+    display: inline-block;
+}
+.left{
+    text-align: left;
+}
+.left li{
+    margin-top: 20px;
+}
+.left a{
+    color: black;
+}
+.menu input{
+    display: none;
+}
+.menuTwo{
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    transition: .5s;
+    background-color:rgb(255, 255, 255);
+    font-size: 18px;
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+}
+[id=open]:checked ~ ul{
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+.menu{
+    display: none;
+}
+@media all and (max-width:481px)  {
+    .container{
+        padding: 0 15px;
+    }
+    .menu{
+        display: block;
+    }
+    .logoleft >ul{
+        display: none;
+    }
+    .logoright{
+        display: none;
+    }
+}
+
+header{
+    background-image: url(../img/back.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 820px;
+    position: relative;
+    z-index: -2;
+}
+.head{
+    padding-top: 120px;
+}
+.head h1{
+    font-size: 90px;
+    font-style: italic;
+    padding-top: 120px;
+    width: 50%;
+}
+.head p{
+    font-size: 20px;
+    width: 50%;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.head a{
+    /* border: 2px solid red; */
+    padding: 20px 50px;
+    border-radius: 50px;
+    background-color: orangered;
+    color: white;
+    font-size: 22px;
+}
+header img{
+    position: absolute;
+    width: 300px;
+    left: 0;
+    bottom: -40px;
+    z-index: -1;
+}
+
+@media all and (max-width:480px)  {
+    .head{
+        padding-top: 0;
+    }
+    .head h1{
+        font-size: 40px;
+        width: 100%;
+    }
+    .head p{
+        width: 100%;
+        font-size: 16px;
+    }
+    header{
+        background-size: 1000px;
+        background-position: top;
+        height: 430px;
+        /* border: 2px solid red; */
+    }
+    header img{
+        display: none;
+    }
+}
+
+.sec{
+    margin-top: 100px;
+}
+.txt{
+    text-align: center;
+}
+.txt p{
+    color: orangered;
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+.txt h2{
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.photo{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.photo1 img,
+.photo2 img,
+.photo3 img{
+    transition: 1s;
+}
+.img{
+    overflow: hidden;
+    border-bottom-right-radius: 50px;
+}
+.photo1,
+.photo2,
+.photo3{
+    /* border: 2px solid red; */
+    text-align: center;
+    background-color: #fff3f0;
+    padding: 20px;
+    border-bottom-right-radius: 50px;
+}
+.photo1 h3,
+.photo2 h3,
+.photo3 h3{
+    font-size: 22px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 10px 0;
+    transition: .5s;
+    width: 35%;
+    margin: auto;
+}
+.photo1 h3:hover,
+.photo2 h3:hover,
+.photo3 h3:hover{
+    color: orangered;
+}
+.photo1 p,
+.photo2 p,
+.photo3 p{
+    margin: auto;
+    width: 70%;
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 30px;
+}
+.photo1 a,
+.photo2 a,
+.photo3 a{
+    padding: 20px 45px;
+    border-radius: 50px;
+    background-color: orangered;
+    color: white;
+    font-size: 18px;
+    transition: 1s;
+}
+.photo1:hover img,
+.photo2:hover img,
+.photo3:hover img{
+    transform:scale(1.1);
+}
+section{
+    margin-bottom: 120px;
+}
+
+@media all and (max-width:480px) {
+    .photo1,
+    .photo3{
+        display: none;
+    }
+    .photo2{
+        margin: auto;
+    }
+    .txt p{
+        font-size: 14px;
+    }
+    .txt h2{
+        font-size: 25px;
+    }
+}
